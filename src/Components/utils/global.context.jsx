@@ -5,10 +5,9 @@ import { createContext } from "react";
 const ContextGlobal = createContext();
 const lsFavs = JSON.parse(localStorage.getItem("favorites")) || [];
 const Context = ({ children }) => {
-  //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
   const [odontologo, setOdontologo] = useState([]);
   const [favorites, setFavorites] = useState(lsFavs);
-
+  
   const url = "https://jsonplaceholder.typicode.com/users";
 
   useEffect(() => {
