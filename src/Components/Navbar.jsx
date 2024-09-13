@@ -20,8 +20,8 @@ const Navbar = () => {
           <img
             src={
               state.theme === "dark-mode"
-                ? "./images/logo-dental-blanco.png"
-                : "./images/logo-dental.png"
+                ? "/images/logo-dental-blanco.png"
+                : "/images/logo-dental.png "
             }
             alt=""
             width={250}
@@ -47,8 +47,8 @@ const Navbar = () => {
             <img
               src={
                 state.theme === "dark-mode"
-                  ? "./images/light.png"
-                  : "./images/dark.png"
+                  ? "/images/light.png"
+                  : "/images/dark.png"
               }
               alt="theme-toggle"
               width={35}
