@@ -43,7 +43,7 @@ const Detail = () => {
     return <div>Error: {error}</div>;
   }
   return (
-    <>
+    <div className="detalle">
       <h1>Detail Dentist {detail.id} </h1>
 
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
@@ -84,7 +84,7 @@ const Detail = () => {
           <td>{detail.website}</td>
         </tr>
       </table>
-    </>
+    </div>
   );
 };
 

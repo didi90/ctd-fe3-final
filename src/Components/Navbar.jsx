@@ -17,7 +17,16 @@ const Navbar = () => {
         }`}
       >
         <Link to="/">
-          <img src="./images/logo-dental.png" alt="" width={200} height={100} />
+          <img
+            src={
+              state.theme === "dark-mode"
+                ? "./images/logo-dental-blanco.png"
+                : "./images/logo-dental.png"
+            }
+            alt=""
+            width={250}
+            height={100}
+          />
         </Link>
         <nav className="navbar">
           <Link to="/">
@@ -29,7 +38,12 @@ const Navbar = () => {
           <Link to="/contact">
             <h4>Contact</h4>
           </Link>
-          <button onClick={changeButton}>
+          <button
+            onClick={changeButton}
+            className={`theme-toggle-button ${
+              state.theme === "dark-mode" ? "dark-mode" : "light"
+            }`}
+          >
             <img
               src={
                 state.theme === "dark-mode"
@@ -37,8 +51,8 @@ const Navbar = () => {
                   : "./images/dark.png"
               }
               alt="theme-toggle"
-              width={50}
-              height={50}
+              width={35}
+              height={35}
             />
           </button>
         </nav>

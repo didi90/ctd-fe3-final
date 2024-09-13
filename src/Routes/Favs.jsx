@@ -14,7 +14,7 @@ const Favs = () => {
   };
 
   return (
-    <div>
+    <div className="contenedor-favoritos">
       <h1>Mis Favoritos</h1>
       <button onClick={resetFavs} className="resetButton">
         Resetear Favoritos
