@@ -9,7 +9,7 @@ const Navbar = () => {
     <>
       <div class="contenedor">
         <Link to="/">
-          <img src="./images/logodental.jpg" alt="" width={100} height={80} />
+          <img src="./images/logo-dental.png" alt="" width={200} height={100} />
         </Link>
         <nav className="navbar">
           <Link to="/">
