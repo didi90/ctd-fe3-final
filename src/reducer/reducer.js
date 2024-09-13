@@ -7,7 +7,7 @@ export const reducer = (state, action) => {
         case "RESET":
             return { ...state, favorites: [] };
         case "CHANGE_THEME":
-            return { ...state, theme: state.theme === "light" ? "dark-mode" : "light" };
+            return { ...state, theme: state.theme === "dark-mode" ? "light" : "dark-mode",};
         default:
             return state;
     }

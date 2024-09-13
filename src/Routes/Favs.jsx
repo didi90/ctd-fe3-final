@@ -19,6 +19,7 @@ const Favs = () => {
       <button onClick={resetFavs} className="resetButton">
         Resetear Favoritos
       </button>
+      
       <div className="card-grid">
         {state.favorites.length > 0 ? (
           state.favorites.map((odontologo) => (

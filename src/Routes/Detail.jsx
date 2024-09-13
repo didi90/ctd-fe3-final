@@ -49,9 +49,7 @@ const Detail = () => {
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
       <table
-        className={`odontologo-info ${
-          state.theme === "dark-mode" ? "dark-mode" : "light"
-        }`}
+        className={state.theme === "dark-mode" ? "dark-mode" : "light"}
       >
         <tr>
           <td>

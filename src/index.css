@@ -77,6 +77,10 @@ nav a[href='/contact'] {
   color: #51a6eb; 
 }
 
+nav a[href="/detail/:id"] {
+  color: #51a6eb; 
+}
+
 nav a:hover {
   background-color: rgba(255, 255, 255, 0.2);
   color: #103655;
@@ -179,6 +183,7 @@ form {
 .card-grid {
   display: flex;
   justify-content: space-evenly;
+  padding-top:15px;
   gap: 1rem;
   width: 90vw;
   height: auto;
@@ -285,6 +290,10 @@ table.odontologo-info {
   color: #ffffff; 
 }
 
+.dark-mode nav a[href="/detail/:id"] {
+  color: #ffffff;
+}
+
 
 .dark-mode nav a:hover {
   background-color: rgba(0, 0, 0, 0.2);
@@ -311,13 +320,14 @@ table.odontologo-info {
 }
 
 .dark-mode .favButton {
-  background-color: #b2b2b2; 
+  background-color: #717171;  
 }
 
 .dark-mode .resetButton {
   background-color:#b2b2b2; 
   color: black; 
   box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.2); 
+  color: white
 }
 
 .dark-mode .resetButton:hover {

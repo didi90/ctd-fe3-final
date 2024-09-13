@@ -18,8 +18,7 @@ function App() {
       <Routes>
         <Route path={routes.home} element={<Home />} />
         <Route path={routes.favs} element={<Favs />} />
-        <Route path={routes.detail} element={<Detail />} />{" "}
-        {/* Ruta dinámica */}
+        <Route path={routes.detail} element={<Detail />} />{" "}  {/* Ruta dinámica */}
         <Route path={routes.contact} element={<Contact />} />
         <Route
           path={routes.notFound}
