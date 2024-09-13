@@ -172,33 +172,63 @@ table.odontologo-info {
 
 /* Estilos para el modo oscuro */
 .dark-mode {
-  background-color: #121212;  /* Fondo oscuro para el cuerpo */
-  color: white;  /* Texto en blanco */
+  background-color: #121212;  
+  color: white;  
 }
 
 .dark-mode nav {
-  background-color: #1e1e1e;  /* Fondo oscuro para la barra de navegación */
+  background-color: #1e1e1e;  
 }
 
 .dark-mode a {
-  color: #ffffff;  /* Color de enlaces en modo oscuro */
+  color: #ffffff; 
 }
 
 .dark-mode .card {
-  background-color: #717171;  /* Fondo oscuro para las tarjetas */
+  background-color: #717171;  
   border: 0.5px solid rgba(255, 255, 255, 0.2);
   color: white;
 }
 
 .dark-mode .card:hover {
-  border: 0.5px solid rgba(255, 255, 255, 0.7);  /* Cambio en hover en modo oscuro */
+  border: 0.5px solid rgba(255, 255, 255, 0.7); 
 }
 
 .dark-mode footer {
-  background-color: #1e1e1e;  /* Fondo oscuro para el pie de página */
+  background-color: #1e1e1e; 
   color: white;
 }
 
 .dark-mode .favButton {
-  background-color: #b2b2b2; /* Gris claro en modo oscuro */
+  background-color: #b2b2b2; 
+}
+
+/* Estilos para las tablas en modo oscuro */
+
+.dark-mode table {
+  background-color: #2a2a2a; 
+  color: white; 
+  border: 1px solid #444; 
+}
+
+.dark-mode th, .dark-mode td {
+  border: 1px solid #444; 
+  padding: 8px; 
+  background-color: #333; 
+}
+
+.dark-mode tr:nth-child(odd) {
+  background-color: #2a2a2a; 
+}
+
+.dark-mode tr:nth-child(even) {
+  background-color: #333; 
+}
+
+.dark-mode tr:hover {
+  background-color: #575757; 
+}
+
+.dark-mode table.odontologo-info td:first-child {
+  background-color: #414141; 
 }

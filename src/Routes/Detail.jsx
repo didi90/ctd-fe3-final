@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useContextGlobal } from "../Components/utils/global.context";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -9,6 +10,8 @@ const Detail = () => {
   const [detail, setDetail] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const { state } = useContextGlobal();
 
   useEffect(() => {
     // Función para obtener los datos del odontólogo basado en el id
@@ -45,7 +48,11 @@ const Detail = () => {
 
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
-      <table class="odontologo-info">
+      <table
+        className={`odontologo-info ${
+          state.theme === "dark-mode" ? "dark-mode" : "light"
+        }`}
+      >
         <tr>
           <td>
             <strong>Nombre:</strong>
