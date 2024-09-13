@@ -6,7 +6,6 @@ const Card = ({ odontologo, disabled }) => {
   const { state, dispatch } = useContextGlobal();
 
   const addFav = () => {
-    // Verificar si el odontólogo ya está en favoritos
     const isAlreadyFavorite = state.favorites.some(
       (fav) => fav.id === odontologo.id
     );
@@ -31,7 +30,6 @@ const Card = ({ odontologo, disabled }) => {
         <p>Nombre: {odontologo.name}</p>
         <p>UserName: {odontologo.username}</p>
       </Link>
-      {/* Deshabilitar el botón si la prop 'disabled' es true */}
       <button
         onClick={addFav}
         className={`favButton ${state.theme === "dark" ? "dark" : ""}`}

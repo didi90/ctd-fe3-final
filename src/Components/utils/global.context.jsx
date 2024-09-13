@@ -4,7 +4,7 @@ import { reducer } from "../../reducer/reducer";
 
 const ContextGlobal = createContext();
 const lsFavs = JSON.parse(localStorage.getItem("favorites")) || [];
-const lsTheme = localStorage.getItem("theme") || "light"; // Cargar el tema desde localStorage
+const lsTheme = localStorage.getItem("theme") || "light"; 
 
 const initialState = {
   odontologo: [],
@@ -13,17 +13,13 @@ const initialState = {
 };
 
 const Context = ({ children }) => {
-  //const [odontologo, setOdontologo] = useState([]);
-  //[favorites, setFavorites] = useState(lsFavs);
 
   const [state, dispatch] = useReducer(reducer, initialState);
-
   const url = "https://jsonplaceholder.typicode.com/users";
 
   useEffect(() => {
     axios(url).then((res) => {
       console.log(res.data);
-      //setOdontologo(res.data);
       dispatch({ type: "GET_CHARS", payload: res.data });
     });
   }, []);

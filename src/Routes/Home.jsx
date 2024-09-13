@@ -16,12 +16,9 @@ const Home = () => {
             name={odontologo.name}
             username={odontologo.username}
             odontologo={odontologo}
-            // En Home, todo está habilitado
             disabled={false}
           />
         ))}
-
-        {/* Aqui deberias renderizar las cards */}
       </div>
     </main>
   );

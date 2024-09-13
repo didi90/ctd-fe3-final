@@ -2,7 +2,7 @@ import React from "react";
 import { useContextGlobal } from "../Components/utils/global.context";
 
 const Footer = () => {
-  const { state, dispatch } = useContextGlobal();
+  const { state } = useContextGlobal();
   return (
     <footer>
       <p>Powered by</p>

@@ -5,8 +5,8 @@ import { useContextGlobal } from "../Components/utils/global.context";
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Detail = () => {
-  // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
-  const { id } = useParams(); // Extraemos el id de la URL
+  
+  const { id } = useParams();
   const [detail, setDetail] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -14,7 +14,6 @@ const Detail = () => {
   const { state } = useContextGlobal();
 
   useEffect(() => {
-    // Función para obtener los datos del odontólogo basado en el id
     const fetchOdontologo = async () => {
       try {
         const response = await fetch(

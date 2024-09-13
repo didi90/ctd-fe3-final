@@ -3,13 +3,12 @@ import Card from "../Components/Card";
 import { useContextGlobal } from "../Components/utils/global.context";
 
 const Favs = () => {
-  const { state, dispatch } = useContextGlobal(); // Asegúrate de tener acceso a setFavorites
+  const { state, dispatch } = useContextGlobal(); 
 
   const resetFavs = () => {
-    // Borrar favoritos del localStorage
     localStorage.removeItem("favorites");
     dispatch({ type: "RESET" });
-    localStorage.setItem("favorites", JSON.stringify([])); // Actualiza localStorage a vacío
+    localStorage.setItem("favorites", JSON.stringify([])); 
     alert("Favoritos reiniciados");
   };
 
@@ -29,7 +28,7 @@ const Favs = () => {
               username={odontologo.username}
               odontologo={odontologo}
               id={odontologo.id}
-              disabled={true} // En Favs, todo está deshabilitado
+              disabled={true} 
             />
           ))
         ) : (
