@@ -1,13 +1,21 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+import { Link } from "react-router-dom";
+import { useContextGlobal } from "../Components/utils/global.context";
 
 const Navbar = () => {
-  const navigate = useNavigate();
+  const { state, dispatch } = useContextGlobal();
+
+  const changeButton = () => {
+    dispatch({ type: "CHANGE_THEME" });
+  };
+
   return (
     <>
-      <div class="contenedor">
+      <div
+        className={`contenedor ${
+          state.theme === "dark-mode" ? "dark-mode" : "light"
+        }`}
+      >
         <Link to="/">
           <img src="./images/logo-dental.png" alt="" width={200} height={100} />
         </Link>
@@ -21,7 +29,18 @@ const Navbar = () => {
           <Link to="/contact">
             <h4>Contact</h4>
           </Link>
-          <img src="./images/darkmode.jpg" alt="" width={50} height={50} />
+          <button onClick={changeButton}>
+            <img
+              src={
+                state.theme === "dark-mode"
+                  ? "./images/light.png"
+                  : "./images/dark.png"
+              }
+              alt="theme-toggle"
+              width={50}
+              height={50}
+            />
+          </button>
         </nav>
       </div>
     </>

@@ -3,18 +3,18 @@ import React from "react";
 import { useContextGlobal } from "../Components/utils/global.context";
 
 const Card = ({ odontologo, disabled }) => {
-  const { favorites, setFavorites } = useContextGlobal();
+  const { state, dispatch } = useContextGlobal();
 
   const addFav = () => {
     // Verificar si el odontólogo ya está en favoritos
-    const isAlreadyFavorite = favorites.some(fav => fav.id === odontologo.id);
+    const isAlreadyFavorite = state.favorites.some(
+      (fav) => fav.id === odontologo.id
+    );
 
     if (isAlreadyFavorite) {
-      // Si ya está en favoritos, mostrar una alerta
       alert("Este odontólogo ya está en favoritos");
     } else {
-      // Si no está, agregarlo a la lista de favoritos
-      setFavorites((favorites) => [...favorites, odontologo]);
+      dispatch({ type: "ADD_FAV", payload: odontologo });
       alert("Odontólogo agregado a favoritos");
     }
   };
@@ -30,14 +30,13 @@ const Card = ({ odontologo, disabled }) => {
         />
         <p>Nombre: {odontologo.name}</p>
         <p>UserName: {odontologo.username}</p>
-        <p>ID: {odontologo.id}</p>
       </Link>
       {/* Deshabilitar el botón si la prop 'disabled' es true */}
-      <button 
-        onClick={addFav} 
-        className="favButton" 
+      <button
+        onClick={addFav}
+        className={`favButton ${state.theme === "dark" ? "dark" : ""}`}
         disabled={disabled}
-        style={{ opacity: disabled ? 0.5 : 1}}
+        style={{ opacity: disabled ? 0.5 : 1 }}
       >
         ⭐
       </button>

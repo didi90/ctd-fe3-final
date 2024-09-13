@@ -1,31 +1,31 @@
+/* Estilos globales */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+  color: black;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
-.favButton{
+
+.favButton {
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
   border: none;
   width: 100%;
   cursor: pointer;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-
 }
 
-h1{
+h1 {
   text-align: center;
 }
 
-div.contenedor{
+div.contenedor {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,8 +33,7 @@ div.contenedor{
   padding: 1rem; 
 }
 
-
-nav{
+nav {
   display: flex;
   width: 80vw;
   justify-content: flex-end; 
@@ -42,7 +41,7 @@ nav{
   margin: 0 auto;
 }
 
-a{
+a {
   color: #000;
   text-decoration: none;
   margin: 5px;
@@ -50,9 +49,9 @@ a{
   transition: color 0.3s ease;
 }
 
-a:hover{
+a:hover {
   color: rgb(136, 136, 136);
-} 
+}
 
 footer {
   display: flex;
@@ -67,16 +66,17 @@ footer {
   flex-wrap: wrap;
 }
 
-footer > img{
+footer > img {
   width: 200px;
   margin: 0;
 }
-footer > p{
+
+footer > p {
   margin: 0;
   padding-top: 0.7rem;
 }
 
-form{
+form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -85,7 +85,7 @@ form{
   margin: 0 auto;
 }
 
-.card{
+.card {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -98,13 +98,12 @@ form{
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.card:hover{
+.card:hover {
   border: 0.5px solid rgb(206, 217, 142);
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-
 }
 
-.card-grid{
+.card-grid {
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
@@ -115,12 +114,13 @@ form{
   max-width: 1200px;
 }
 
+/* Estilos para las tablas */
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    display: table;
-    border: 1px solid #ccc;    
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  display: table;
+  border: 1px solid #ccc;    
 }
 
 td, th {
@@ -170,10 +170,35 @@ table.odontologo-info {
   overflow: hidden;
 }
 
-.dark{
-  background-color: #12121296;
+/* Estilos para el modo oscuro */
+.dark-mode {
+  background-color: #121212;  /* Fondo oscuro para el cuerpo */
+  color: white;  /* Texto en blanco */
+}
+
+.dark-mode nav {
+  background-color: #1e1e1e;  /* Fondo oscuro para la barra de navegación */
+}
+
+.dark-mode a {
+  color: #ffffff;  /* Color de enlaces en modo oscuro */
+}
+
+.dark-mode .card {
+  background-color: #717171;  /* Fondo oscuro para las tarjetas */
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
   color: white;
 }
-.dark > a {
+
+.dark-mode .card:hover {
+  border: 0.5px solid rgba(255, 255, 255, 0.7);  /* Cambio en hover en modo oscuro */
+}
+
+.dark-mode footer {
+  background-color: #1e1e1e;  /* Fondo oscuro para el pie de página */
   color: white;
+}
+
+.dark-mode .favButton {
+  background-color: #b2b2b2; /* Gris claro en modo oscuro */
 }

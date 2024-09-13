@@ -3,15 +3,13 @@ import Card from "../Components/Card";
 import { useContextGlobal } from "../Components/utils/global.context";
 
 const Favs = () => {
-  const { favorites, setFavorites } = useContextGlobal();  // Asegúrate de tener acceso a setFavorites
+  const { state, dispatch } = useContextGlobal(); // Asegúrate de tener acceso a setFavorites
 
   const resetFavs = () => {
     // Borrar favoritos del localStorage
     localStorage.removeItem("favorites");
-
-    // Actualizar el estado de favoritos a un array vacío
-    setFavorites([]);
-
+    dispatch({ type: "RESET" });
+    localStorage.setItem("favorites", JSON.stringify([])); // Actualiza localStorage a vacío
     alert("Favoritos reiniciados");
   };
 
@@ -22,15 +20,15 @@ const Favs = () => {
         Resetear Favoritos
       </button>
       <div className="card-grid">
-        {favorites.length > 0 ? (
-          favorites.map((odontologo) => (
+        {state.favorites.length > 0 ? (
+          state.favorites.map((odontologo) => (
             <Card
               key={odontologo.id}
               name={odontologo.name}
               username={odontologo.username}
               odontologo={odontologo}
               id={odontologo.id}
-              disabled={true}  // En Favs, todo está deshabilitado
+              disabled={true} // En Favs, todo está deshabilitado
             />
           ))
         ) : (

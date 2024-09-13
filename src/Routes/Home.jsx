@@ -5,19 +5,19 @@ import { useContextGlobal } from "../Components/utils/global.context";
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Home = () => {
-  const { odontologo } = useContextGlobal();
+  const { state } = useContextGlobal();
   return (
-    <main className="">
+    <main className={state.theme === "dark-mode" ? "dark-mode" : "light"}>
       <h1>Home</h1>
       <div className="card-grid">
-        {odontologo.map((odontologo) => (
+        {state.odontologo.map((odontologo) => (
           <Card
             key={odontologo.id}
             name={odontologo.name}
             username={odontologo.username}
             odontologo={odontologo}
             // En Home, todo está habilitado
-            disabled={false} 
+            disabled={false}
           />
         ))}
 
